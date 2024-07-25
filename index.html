@@ -2,84 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/jsproject/assets/Favicon-30b3351a.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>JS Team Project</title>
     
-    <script type="module" crossorigin src="/vanilla-app-template/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/vanilla-app-template/assets/index-10c40100.css">
+    <script type="module" crossorigin src="/jsproject/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/jsproject/assets/vendor-e5b62995.js">
+    <link rel="stylesheet" href="/jsproject/assets/index-bf02a2db.css">
   </head>
   <body>
-    <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+    <div class="page" id="page">
+      <header class="header">
+  <div class="container">
+    <p>header</p>
+  </div>
 </header>
 
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/vanilla-app-template/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
+      <main>
+        <section class="hero">
   <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/vanilla-app-template/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
-    </div>
+    <p>hero</p>
+    <svg width="12" height="12">
+      <use href="../img/svg-sprites/symbol-defs.svg#icon-dark-arrow"></use>
+    </svg>
+    <svg width="12" height="12">
+      <use href="../img/svg-sprites/symbol-defs.svg#icon-white-arrow"></use>
+    </svg>
+    <svg width="12" height="12">
+      <use
+        href="../img/svg-sprites/symbol-defs.svg#icon-small-white-arrow"
+      ></use>
+    </svg>
+    <svg width="12" height="12">
+      <use
+        href="../img/svg-sprites/symbol-defs.svg#icon-small-white-arrow"
+      ></use>
+    </svg>
+    <svg width="12" height="12">
+      <use href="../img/svg-sprites/symbol-defs.svg#icon-close-icon"></use>
+    </svg>
+    <svg width="12" height="12">
+      <use href="../img/svg-sprites/symbol-defs.svg#icon-white-arrow"></use>
+    </svg>
   </div>
 </section>
 
+        <section class="about-me">
+  <div class="container">
+    <p>about-me</p>
+  </div>
+</section>
 
+        <section class="benefits">
+  <div class="container"></div>
+</section>
+
+        <section class="projects">
+  <div class="container">
+    <p>projects</p>
+  </div>
+</section>
+
+        <section class="faq">
+  <div class="container">
+    <p>faq</p>
+  </div>
+</section>
+
+        <section class="covers">
+  <div class="container">
+    <p>covers</p>
+  </div>
+</section>
+
+        <section class="reviews">
+  <div class="container">
+    <p>reviews</p>
+  </div>
+</section>
+
+      </main>
+      <div class="modal">
+  <div class="container"></div>
+</div>
+
+      <footer class="footer" id="footer">
+  <div class="container">
+    <p>footer</p>
+  </div>
+</footer>
+
+    </div>
     
   </body>
 </html>
