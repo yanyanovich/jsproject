@@ -5,6 +5,7 @@
   |============================
 */
 @import url('swiper/css');
+@import url('./inter-tight.css');
 @import url('./normalize.css');
 @import url('./common.css');
 @import url('./about-me.css');
