@@ -1,68 +1,108 @@
 body {
   margin: 0;
-  font-family: 'Pridi', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .content {
-  height: 508px;
-  padding: 10px;
-  border: 3px solid red;
   position: relative;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(200, 54, 54, 0.2) 100%
-  );
-  overflow: hidden;
 }
 
 .marquee {
-  position: relative;
+  position: absolute;
+  right: -800px;
+  left: 0;
+  overflow: hidden;
+  font-family: 'Pridi', sans-serif;
+  font-weight: 600;
   font-size: 34px;
   text-transform: uppercase;
 }
 
 .marquee__inner {
-  height: 100%;
+  height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+
   transform: rotate(16deg);
 }
 
 .marquee__line {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 280px;
-  height: 160px;
+  background-color: #ffdc00;
+  flex-shrink: 0;
   margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  color: #fff;
-  margin-bottom: 20px;
+  width: calc(100% / 10);
 
-  color: transparent;
+  background-size: cover;
+  background-position: center;
+  white-space: nowrap;
+
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
-@media (max-width: 374px) {
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+  to {
+    transform: translateX(-180%);
+  }
+}
+
+@media (max-width: 767px) {
   .marquee__line {
     width: 282px;
     height: 162px;
   }
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   .marquee__line {
     width: 544px;
     height: 314px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .marquee__line {
     width: 544px;
     height: 314px;
   }
+}
+.marquee__inner ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin: 0;
+  list-style: none;
+}
+
+.marquee__inner li {
+  margin-right: 10px;
+  background-color: #ffdc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
