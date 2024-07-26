@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Pridi', sans-serif;
+}
+
+.content {
+  height: 508px;
+  padding: 10px;
+  border: 3px solid red;
+  position: relative;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(200, 54, 54, 0.2) 100%
+  );
+  overflow: hidden;
+}
+
+.marquee {
+  position: relative;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.marquee__inner {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transform: rotate(16deg);
+}
+
+.marquee__line {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 160px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  color: #fff;
+  margin-bottom: 20px;
+
+  color: transparent;
+}
+
+@media (max-width: 374px) {
+  .marquee__line {
+    width: 282px;
+    height: 162px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .marquee__line {
+    width: 544px;
+    height: 314px;
+  }
+}
+
+@media (min-width: 768px) {
+  .marquee__line {
+    width: 544px;
+    height: 314px;
+  }
+}
