@@ -1,9 +1,11 @@
+import { Swiper } from 'swiper/vue';
 import { ajaxRequest } from './ajax-request.js';
 export const reviews = Swiper => {
   console.log(Swiper);
 
   ajaxRequest();
 };
+
 const reviewsEl = document.querySelector('.swiper_reviews');
 
 fetch('https://portfolio-js.b.goit.study/api/reviews')
@@ -17,16 +19,14 @@ fetch('https://portfolio-js.b.goit.study/api/reviews')
     console.log(data);
     const listMarkUp = createListMarkUp(data);
     reviewsEl.insertAdjacentHTML('beforeend', listMarkUp);
+  })
+  .catch(err => {
+    console.error('Service not found');
   });
-// .catch(err => {
-//   console.error('Service not found');
-// });
 
-const createLiMarkUp = ({
-  author,
-  avatar_url,
-  review,
-}) => `<img class="js-reviews-photo" src="${avatar_url}" alt="${author}" />
+const createLiMarkUp = ({ author, avatar_url, review }) => `
+      <img class="js-reviews-photo" src="${avatar_url}" alt="${author}" />
       <h3 class="reviews-name js-reviews-name">${author}</h3>
-      <p class="js-user-review">${review}</p>`;
+      <p class="js-user-review">${review}</p>
+     `;
 const createListMarkUp = arrReviews => arrReviews.map(createLiMarkUp).join('');
