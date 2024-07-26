@@ -4,21 +4,29 @@ export const reviews = Swiper => {
 
   ajaxRequest();
 };
+const reviewsEl = document.querySelector('.swiper_reviews');
 
-const reviewsEl = document.querySelector('.js-reviews_container');
-
-fetch('https://swiperjs.com/swiper-api')
+fetch('https://portfolio-js.b.goit.study/api/reviews')
   .then(res => {
+    if (!res.ok) {
+      throw new Error(res.status);
+    }
     return res.json();
   })
   .then(data => {
     console.log(data);
+    const listMarkUp = createListMarkUp(data);
+    reviewsEl.insertAdjacentHTML('beforeend', listMarkUp);
   });
+// .catch(err => {
+//   console.error('Service not found');
+// });
 
-// розмітка для данних з бекенду
-//
-// <li>
-// <img src="" alt="" />
-// <h3></h3>
-// <p></p>
-// </li>
+const createLiMarkUp = ({
+  author,
+  avatar_url,
+  review,
+}) => `<img class="js-reviews-photo" src="${avatar_url}" alt="${author}" />
+      <h3 class="reviews-name js-reviews-name">${author}</h3>
+      <p class="js-user-review">${review}</p>`;
+const createListMarkUp = arrReviews => arrReviews.map(createLiMarkUp).join('');
