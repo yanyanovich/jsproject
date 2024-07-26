@@ -80,20 +80,9 @@ body {
 }
 .marquee__inner ul {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   margin: 0;
   list-style: none;
-}
-
-.marquee__inner li {
-  margin-right: 10px;
-  background-color: #ffdc00;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  white-space: nowrap;
 }
 
 .visually-hidden {
