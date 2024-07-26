@@ -21,6 +21,7 @@
   max-width: 344px;
   height: 270px;
   background-color: #242527;
+  box-sizing: border-box;
 }
 .benefits_list_item_title {
   font-weight: 600;
@@ -71,7 +72,28 @@
 }
 
 @media (min-width: 768px) {
+  .benefits_list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 64px;
+  }
 }
 
 @media (min-width: 1440px) {
+  .benefits_container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .benefits_con {
+    justify-content: flex-end;
+    max-width: calc(50% - 16px);
+  }
+
+  .benefits_list_item {
+    flex: 0 1 calc(50% - 16px);
+  }
+
+  .benefits_list_item {
+    max-width: 332px;
+  }
 }
