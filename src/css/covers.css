@@ -10,6 +10,9 @@ body {
 
 .content {
   position: relative;
+  min-width: 320px;
+  max-width: 1440px;
+  border: 2px solid red;
 }
 
 .marquee {
@@ -24,20 +27,19 @@ body {
 }
 
 .marquee__inner {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
-
+  margin: 20px;
   transform: rotate(16deg);
 }
 
 .marquee__line {
-  background-color: #ffdc00;
   flex-shrink: 0;
   margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(100% / 10);
+  /* width: calc(100% / 20); */
 
   background-size: cover;
   background-position: center;
@@ -80,7 +82,8 @@ body {
 }
 .marquee__inner ul {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+
   margin: 0;
   list-style: none;
 }
