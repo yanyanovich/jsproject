@@ -1,0 +1,63 @@
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.about-me {
+}
+
+.section-description-wrapper {
+  padding: 32px 32px 272px 32px;
+  margin-bottom: 16px;
+  border-radius: 24px;
+  background: #242527;
+}
+
+.section-description {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+.section-description-element-red {
+  color: #ed3b44;
+}
+.section-description-element-gray {
+  color: rgba(250, 250, 250, 0.4);
+}
+.photo-wrapper {
+  border-radius: 24px;
+  width: 343px;
+  height: 500px;
+}
+.user-photo {
+}
+.about-me-list {
+}
+.about-me-item-title {
+}
+.about-me-description {
+}
+.role-list {
+}
+.role-list-item {
+}
+.education-list {
+}
+.education-list-item {
+}
+.about-me-expirience {
+}
+
+.answer-js {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+.answer-js.hidden {
+  max-height: 0;
+}
