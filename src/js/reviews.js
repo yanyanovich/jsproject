@@ -7,13 +7,13 @@ export const reviews = Swiper => {
 
 const reviewsEl = document.querySelector('.js-reviews_container');
 
-// fetch('https://swiperjs.com/swiper-api')
-//   .then(res => {
-//     return res.json();
-//   })
-//   .then(data => {
-//     console.log(data);
-//   });
+fetch('https://swiperjs.com/swiper-api')
+  .then(res => {
+    return res.json();
+  })
+  .then(data => {
+    console.log(data);
+  });
 
 // розмітка для данних з бекенду
 //
