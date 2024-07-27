@@ -1,38 +1,82 @@
+.reviews {
+  padding-top: 64px;
+}
 @media (min-width: 768px) {
-    .reviews {
-        padding-top: 32px;
-    }
+  .reviews {
+    padding-top: 96px;
+  }
+}
+@media (min-width: 1440px) {
+  .reviews {
+    padding-top: 164px;
+  }
+}
+.reviews__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+.reviews__list {
+  margin-top: 32px;
+}
+.reviews__item__container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  height: 100%;
+}
+.reviews .swiper-slide {
+  height: auto;
+}
+.reviews__item__photo {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+.reviews__item__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reviews__item__name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+}
+.reviews__item__review,
+.reviews__notfound {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  margin-top: 8px;
 }
 
-.js-reviews-photo{
-    width:48px ;
-    height:48px ;
-};
-.container{
-    margin-left: auto;
-    margin-right: auto;
+.reviews__nav {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
-.container-photo{
-    border-radius: 50px;
-};
-.swiper-button-prev, .swiper-button-next {
-    border:1px solid rgba(250, 250, 250, 0.5);
+@media (min-width: 768px) {
+  .reviews__nav {
+    gap: 20px;
+  }
 }
-.swiper-slide{
-    width: 343px;
-height: 442px;
-};
-.swiper {
-    width: 600px;
-    height: 300px;
-}
-.js-list-rev{
-    margin-top: 32px;
 
-}
-.swiper_reviews {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  
+@media (min-width: 1440px) {
+  .reviews__nav {
+    margin-top: 64px;
+  }
 }

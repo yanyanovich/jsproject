@@ -1,34 +1,68 @@
-import { ajaxRequest } from './ajax-request.js';
+import { fetchReviews } from './ajax-request.js';
+
 export const reviews = Swiper => {
-  console.log(Swiper);
-
-  ajaxRequest();
-};
-
-const reviewsEl = document.querySelector('.swiper_reviews');
-
-fetch('https://portfolio-js.b.goit.study/api/reviews')
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(res.status);
+  const section = document.querySelector('.reviews');
+  if (section) {
+    const reviewsEl = section.querySelector('.swiper-wrapper');
+    if (!reviewsEl) {
+      console.error('Element .swiper-wrapper not found in the DOM');
+      return;
     }
-    return res.json();
-  })
-  .then(data => {
-    console.log(data);
-    const listMarkUp = createListMarkUp(data);
-    reviewsEl.insertAdjacentHTML('beforeend', listMarkUp);
-  })
-  .catch(err => {
-    console.error('Service not found');
-  });
 
-const createLiMarkUp = ({
-  author,
-  avatar_url,
-  review,
-}) => `<li class="swiper-slide">
-<div class="container-photo"><img class="js-reviews-photo" src="${avatar_url}" alt="${author}" /></div>
-      <h3 class="js-reviews-name">${author}</h3>
-      <p class="js-user-review">${review}</p></li>`;
-const createListMarkUp = arrReviews => arrReviews.map(createLiMarkUp).join('');
+    fetchReviews()
+      .then(data => {
+        console.log(data);
+        const listMarkUp = createListMarkUp(data);
+        reviewsEl.insertAdjacentHTML('beforeend', listMarkUp);
+
+        const slider = section.querySelector('.swiper_reviews');
+        if (slider) {
+          const swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            autoHeight: true,
+            speed: 0,
+            navigation: {
+              nextEl: section.querySelector('.swiper-button-next'),
+              prevEl: section.querySelector('.swiper-button-prev'),
+            },
+            keyboard: {
+              enabled: true,
+              onlyInViewport: false,
+            },
+            allowTouchMove: true,
+
+            breakpoints: {
+              768: {
+                speed: 600,
+                autoHeight: false,
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1440: {
+                speed: 600,
+                autoHeight: false,
+                slidesPerView: 4,
+                spaceBetween: 16,
+              },
+            },
+          });
+        }
+      })
+      .catch(err => {
+        reviewsEl.innerHTML = '<p class="reviews__notfound">Not found</p>';
+      });
+  }
+  const createLiMarkUp = ({ author, avatar_url, review }) => `
+  <li class="swiper-slide">
+    <div class="reviews__item__container">
+      <div class="reviews__item__photo">
+        <img src="${avatar_url}" alt="${author}" />
+      </div>
+      <h3 class="reviews__item__name">${author}</h3>
+      <p class="reviews__item__review">${review}</p>
+    </div>
+  </li>`;
+
+  const createListMarkUp = arrReviews =>
+    arrReviews.map(createLiMarkUp).join('');
+};

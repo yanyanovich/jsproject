@@ -110,6 +110,7 @@
     line-height: 100%;
   }
 }
+
 .projects__item__link {
   margin-top: 32px;
   background: var(--button-text);
@@ -156,7 +157,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out,
+    border-color 0.25s ease-in-out;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -173,4 +175,11 @@
 .swiper-button-disabled {
   opacity: 0.2;
   cursor: default;
+}
+.swiper-button-prev:not(.swiper-button-disabled):hover,
+.swiper-button-next:not(.swiper-button-disabled):hover,
+.swiper-button-prev:not(.swiper-button-disabled):focus,
+.swiper-button-next:not(.swiper-button-disabled):focus {
+  background-color: var(--button-red-hover);
+  border-color: var(--button-red-hover);
 }

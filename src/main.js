@@ -9,7 +9,6 @@ import {
 } from 'swiper/modules';
 
 import { aboutMe } from './js/about-me.js';
-import { ajaxRequest } from './js/ajax-request.js';
 import { burger } from './js/burger.js';
 import { faq } from './js/faq.js';
 import { form } from './js/form.js';
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', event => {
     Controller,
   ]);
   aboutMe(Swiper);
-  ajaxRequest();
   burger();
   faq();
   form();
