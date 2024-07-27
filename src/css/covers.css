@@ -1,7 +1,7 @@
 .covers {
   position: relative;
 
-  height: 100vh;
+  height: 960px;
 }
 
 .covers::before {
@@ -11,7 +11,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../img/covers/Hero.png') no-repeat center center;
+
+  backdrop-filter: blur(30px);
+  background: rgba(217, 217, 217, 0.04);
   background-size: cover;
   z-index: -1;
 }
@@ -39,6 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 35px;
 
   background-size: cover;
   background-position: center;
@@ -63,37 +66,10 @@
   .marquee__line {
     width: 282px;
     height: 162px;
-    background-position: center;
   }
-  .marquee__line:nth-child(1) {
-    background-image: url('../img/covers/Rectangle_10_1x.jpg');
-  }
-  .marquee__line:nth-child(2) {
-    background-image: url('../img/covers/Rectangle_11_1x.jpg');
-  }
-  .marquee__line:nth-child(3) {
-    background-image: url('../img/covers/Rectangle_12_1x.jpg');
-  }
-  .marquee__line:nth-child(4) {
-    background-image: url('../img/covers/Rectangle_9_1x.jpg');
-  }
-  .marquee__line:nth-child(5) {
-    background-image: url('../img/covers/Rectangle_8_1x.jpg');
-  }
-  .marquee__line:nth-child(6) {
-    background-image: url('../img/covers/first_screen_1_1x.jpg');
-  }
-  .marquee__line:nth-child(7) {
-    background-image: url('../img/covers/Rectangle_4_1x.jpg');
-  }
-  .marquee__line:nth-child(8) {
-    background-image: url('../img/covers/Rectangle_5_1x.jpg');
-  }
-  .marquee__line:nth-child(9) {
-    background-image: url('../img/covers/Rectangle_7_1x.jpg');
-  }
-  .marquee__line:nth-child(10) {
-    background-image: url('../img/covers/Rectangle_10_1x.jpg');
+  .covers {
+    height: 508px;
+    overflow: hidden;
   }
 }
 
@@ -101,37 +77,10 @@
   .marquee__line {
     width: 544px;
     height: 314px;
-    background-position: center;
   }
-  .marquee__line:nth-child(1) {
-    background-image: url('../img/covers/Rectangle_10_2x.jpg');
-  }
-  .marquee__line:nth-child(2) {
-    background-image: url('../img/covers/Rectangle_11_2x.jpg');
-  }
-  .marquee__line:nth-child(3) {
-    background-image: url('../img/covers/Rectangle_12_2x.jpg');
-  }
-  .marquee__line:nth-child(4) {
-    background-image: url('../img/covers/Rectangle_9_2x.jpg');
-  }
-  .marquee__line:nth-child(5) {
-    background-image: url('../img/covers/Rectangle_8_2x.jpg');
-  }
-  .marquee__line:nth-child(6) {
-    background-image: url('../img/covers/first_screen_1_2x.jpg');
-  }
-  .marquee__line:nth-child(7) {
-    background-image: url('../img/covers/Rectangle_4_2x.jpg');
-  }
-  .marquee__line:nth-child(8) {
-    background-image: url('../img/covers/Rectangle_5_2x.jpg');
-  }
-  .marquee__line:nth-child(9) {
-    background-image: url('../img/covers/Rectangle_7_2x.jpg');
-  }
-  .marquee__line:nth-child(10) {
-    background-image: url('../img/covers/Rectangle_10_2x.jpg');
+  .covers {
+    height: 960px;
+    overflow: hidden;
   }
 }
 
@@ -140,35 +89,9 @@
     width: 544px;
     height: 314px;
   }
-  .marquee__line:nth-child(1) {
-    background-image: url('../img/covers/Rectangle_10_2x.jpg');
-  }
-  .marquee__line:nth-child(2) {
-    background-image: url('../img/covers/Rectangle_11_2x.jpg');
-  }
-  .marquee__line:nth-child(3) {
-    background-image: url('../img/covers/Rectangle_12_2x.jpg');
-  }
-  .marquee__line:nth-child(4) {
-    background-image: url('../img/covers/Rectangle_9_2x.jpg');
-  }
-  .marquee__line:nth-child(5) {
-    background-image: url('../img/covers/Rectangle_8_2x.jpg');
-  }
-  .marquee__line:nth-child(6) {
-    background-image: url('../img/covers/first_screen_1_2x.jpg');
-  }
-  .marquee__line:nth-child(7) {
-    background-image: url('../img/covers/Rectangle_4_2x.jpg');
-  }
-  .marquee__line:nth-child(8) {
-    background-image: url('../img/covers/Rectangle_5_2x.jpg');
-  }
-  .marquee__line:nth-child(9) {
-    background-image: url('../img/covers/Rectangle_7_2x.jpg');
-  }
-  .marquee__line:nth-child(10) {
-    background-image: url('../img/covers/Rectangle_10_2x.jpg');
+  .covers {
+    height: 960px;
+    overflow: hidden;
   }
 }
 
@@ -176,7 +99,7 @@
   display: flex;
   /* flex-wrap: wrap; */
 
-  margin: 0;
+  margin: 20px;
   list-style: none;
 }
 
