@@ -1,28 +1,84 @@
 <section class="hero">
-  <div class="container">
-    <p>hero</p>
-    <svg width="12" height="12">
-      <use href="./img/svg-sprites/symbol-defs.svg#icon-dark-arrow"></use>
-    </svg>
-
-    <svg width="12" height="12">
-      <use href="./img/svg-sprites/symbol-defs.svg#icon-white-arrow"></use>
-    </svg>
-    <svg width="12" height="12">
-      <use
-        href="./img/svg-sprites/symbol-defs.svg#icon-small-white-arrow"
-      ></use>
-    </svg>
-    <svg width="12" height="12">
-      <use
-        href="./img/svg-sprites/symbol-defs.svg#icon-small-white-arrow"
-      ></use>
-    </svg>
-    <svg width="12" height="12">
-      <use href="./img/svg-sprites/symbol-defs.svg#icon-close-icon"></use>
-    </svg>
-    <svg width="12" height="12">
-      <use href="./img/svg-sprites/symbol-defs.svg#icon-white-arrow"></use>
-    </svg>
+  <div class="container hero__container">
+    <picture>
+      <source
+        srcset="
+          img/hero/bg-hero-mobile-min.png    1x,
+          img/hero/bg-hero-mobile@2x-min.png 2x,
+          img/hero/bg-hero-mobile@3x-min.png 3x
+        "
+        media="(max-width: 767.8px)"
+      />
+      <source
+        srcset="
+          img/hero/bg-hero-tablet-min.png    1x,
+          img/hero/bg-hero-tablet@2x-min.png 2x,
+          img/hero/bg-hero-tablet@3x-min.png 3x
+        "
+        media="(max-width: 1439px)"
+      />
+      <source
+        srcset="
+          img/hero/bg-hero-desk-min.png    1x,
+          img/hero/bg-hero-desk@2x-min.png 2x,
+          img/hero/bg-hero-desk@3x-min.png 3x
+        "
+        media="(min-width: 1440px)"
+      />
+      <img
+        src="img/hero/bg-hero-mobile-min.png"
+        alt="hero-background"
+        class="hero__bg container"
+      />
+    </picture>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Hello. <br />
+        I’m Fullstack developer <br />
+        Lloyd Jefferson.
+      </h1>
+      <ul class="hero__navigation_list">
+        <li class="hero__navigation_list_item">
+          <a
+            href="https://www.instagram.com/goitclub/"
+            class="hero__navigation_list_link"
+            target="_blank"
+            >IG</a
+          >
+        </li>
+        <li class="hero__navigation_list_item">
+          <a
+            href="https://www.facebook.com/goITclub/"
+            class="hero__navigation_list_link"
+            target="_blank"
+            >FB</a
+          >
+        </li>
+        <li class="hero__navigation_list_item">
+          <a
+            href="https://www.youtube.com/c/GoIT"
+            class="hero__navigation_list_link"
+            target="_blank"
+            >YT</a
+          >
+        </li>
+        <li class="hero__navigation_list_item">
+          <a
+            href="https://github.com/yanyanovich/jsproject"
+            class="hero__navigation_list_link"
+            target="_blank"
+            >GH</a
+          >
+        </li>
+        <li class="hero__navigation_list_item hero__navigation_email">
+          <a
+            href="mailto:lloydjefferson@gmail.com"
+            class="hero__navigation_list_link"
+            target="_blank"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
