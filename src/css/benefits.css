@@ -1,5 +1,5 @@
 .benefits {
-  padding-top: 164px;
+  padding-top: 64px;
 }
 
 .benefits_title {
@@ -72,9 +72,14 @@
 
 .order_link:hover {
   background-color: #e0373f;
+  border-color: #e0373f;
 }
 
 @media (min-width: 768px) {
+  .benefits {
+    padding-top: 96px;
+  }
+
   .benefits_list {
     flex-wrap: wrap;
     flex-direction: row;
@@ -83,6 +88,10 @@
 }
 
 @media (min-width: 1440px) {
+  .benefits {
+    padding-top: 164px;
+  }
+
   .benefits_container {
     display: flex;
     justify-content: space-between;
