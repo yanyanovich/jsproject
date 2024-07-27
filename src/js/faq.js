@@ -1,24 +1,26 @@
 export const faq = () => {
-};
+  const accordionSections = document.querySelectorAll('.faq');
+  if (accordionSections.length > 0) {
+    accordionSections.forEach(accordionSection => {
+      const faqItems = accordionSection.querySelectorAll('.item-js');
+      faqItems.forEach((faqItem, index) => {
+        const header = faqItem.querySelector('.question-js');
+        const content = faqItem.querySelector('.answer-js');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
+        header.addEventListener('click', () => {
+          const isOpen = content.style.height === `${content.scrollHeight}px`;
 
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            const arrow = this.querySelector('.accordion-arrow');
+          faqItems.forEach((item, i) => {
+            const c = item.querySelector('.answer-js');
+            const a = item.querySelector('.item-js svg');
 
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                arrow.style.transform = 'rotate(0deg)';
-            } else {
-                content.style.display = 'block';
-                arrow.style.transform = 'rotate(180deg)';
-            }
-
-            this.classList.toggle('active');
+            c.style.height =
+              i === index && !isOpen ? `${c.scrollHeight}px` : '0px';
+            a.style.transform =
+              i === index && !isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+          });
         });
+      });
     });
-});
-
+  }
+};

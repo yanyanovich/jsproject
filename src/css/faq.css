@@ -1,81 +1,131 @@
-/* styles.css */
+.faq {
+  padding-top: 64px;
+}
+@media (min-width: 768px) {
+  .faq {
+    padding-top: 96px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq {
+    padding-top: 164px;
+  }
+}
+.faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+.faq-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  position: relative;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+.faq-list::before {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(250, 250, 250, 0.2);
+}
+@media (min-width: 1440px) {
+  .faq-list::before {
+    content: '';
+  }
+}
+.faq-item {
+  flex-basis: 100%;
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+}
+.faq-item-question {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .faq-item-question {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .faq-item {
+    flex-basis: calc(100% / 2);
+  }
+  .faq-item:nth-child(even) .faq-item-question,
+  .faq-item:nth-child(even) .faq-item-answer-text {
+    padding-left: 32px;
+    padding-right: 0;
+  }
 
-
-
-.faq-section {
-    padding: 20px;
-    max-width: 1440px;
-    margin: auto;
+  .faq-item-question {
+    padding-right: 32px;
+  }
 }
 
-.faq-header {
-    display: flex;
-    justify-content: flex-start;
+.faq-item-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 7px;
+  width: 34px;
+  height: 34px;
+  transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+@media (min-width: 768px) {
+  .faq-item-arrow {
+    padding: 10px;
+    min-width: 40px;
+    height: 40px;
+  }
+}
+.faq-item-arrow svg {
+  transition: transform 0.25s ease-in-out;
+}
+.faq-item-question:hover .faq-item-arrow,
+.faq-item-question:focus .faq-item-arrow {
+  background-color: var(--button-red-hover);
+  border-color: var(--button-red-hover);
 }
 
-.faq-header h1 {
-    margin-bottom: 20px;
-    margin-left: 30px;
-    color: #FAFAFA66;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        text-align: left;
+.faq-item-answer {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease-out;
 }
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #1C1D20;
+.faq-item-answer-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  padding-bottom: 20px;
 }
-
-.accordion-item {
-    flex: 1 1 45%;
-    margin: 10px 0;
-    border-top: 1px solid #FAFAFA33;
-    border-bottom: 1px solid #FAFAFA33;
+@media (min-width: 768px) {
+  .faq-item-answer-text {
+    padding-right: 48px;
+    padding-bottom: 26px;
+  }
 }
-
-.accordion-header {
-    background-color: #1C1D20;
-    cursor: pointer;
-    padding: 15px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #FAFAFA;
-    font-size: 18px;
-}
-
-.accordion-content {
-    padding: 15px;
-    display: none;
-    background-color: #1C1D20;
-    color: #FAFAFA99;
-}
-
-.accordion-content p {
-    margin: 0;
-}
-
-.accordion-arrow {
-    transition: transform 0.2s;
-    height: 20px;
-    /* Adjust based on the actual size of the icon */
-}
-
-.accordion-header.active .accordion-arrow {
-    transform: rotate(180deg);
-}
-
-.accordion-item:nth-child(odd) {
-    border-right: 1px solid #FAFAFA33;
-}
-
-.accordion-item:nth-child(even) {
-    border-left: 1px solid #FAFAFA33;
+@media (min-width: 1440px) {
+  .faq-item-answer-text {
+    padding-right: 32px;
+  }
 }
