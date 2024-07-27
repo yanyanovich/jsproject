@@ -59,11 +59,11 @@
 }
 
 .order_link {
+  display: flex;
+  width: fit-content;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 18px 36px;
-  width: 187px;
-  height: 55px;
+  padding: 15px 36px;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -98,7 +98,7 @@
   }
   .benefits_con {
     justify-content: flex-end;
-    max-width: calc(50% - 16px);
+    max-width: calc(50% - 9px);
   }
 
   .benefits_list_item {
