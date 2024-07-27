@@ -1,0 +1,81 @@
+/* styles.css */
+
+
+
+.faq-section {
+    padding: 20px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.faq-header h1 {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    color: #FAFAFA66;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1C1D20;
+}
+
+.accordion-item {
+    flex: 1 1 45%;
+    margin: 10px 0;
+    border-top: 1px solid #FAFAFA33;
+    border-bottom: 1px solid #FAFAFA33;
+}
+
+.accordion-header {
+    background-color: #1C1D20;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FAFAFA;
+    font-size: 18px;
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: #1C1D20;
+    color: #FAFAFA99;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+.accordion-arrow {
+    transition: transform 0.2s;
+    height: 20px;
+    /* Adjust based on the actual size of the icon */
+}
+
+.accordion-header.active .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+.accordion-item:nth-child(odd) {
+    border-right: 1px solid #FAFAFA33;
+}
+
+.accordion-item:nth-child(even) {
+    border-left: 1px solid #FAFAFA33;
+}
