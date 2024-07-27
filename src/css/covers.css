@@ -1,35 +1,35 @@
-body {
-  margin: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.content {
+.covers {
   position: relative;
-  min-width: 320px;
-  max-width: 1440px;
-  border: 2px solid red;
+
+  height: 100vh;
+}
+
+.covers::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/covers/Hero.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
 }
 
 .marquee {
   position: absolute;
-  right: -800px;
+  top: 50%;
   left: 0;
+  right: 0;
+  transform: translateY(-50%);
   overflow: hidden;
-  font-family: 'Pridi', sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  text-transform: uppercase;
+
+  align-items: center;
 }
 
 .marquee__inner {
-  /* height: 100vh; */
   display: flex;
-  margin: 20px;
+  margin-bottom: 35px;
   transform: rotate(16deg);
 }
 
@@ -39,14 +39,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: calc(100% / 20); */
 
   background-size: cover;
   background-position: center;
   white-space: nowrap;
 
   animation-name: marqueeLine;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
@@ -60,26 +59,119 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .marquee__line {
     width: 282px;
     height: 162px;
+    background-position: center;
+  }
+  .marquee__line:nth-child(1) {
+    background-image: url('../img/covers/Rectangle_10_1x.jpg');
+  }
+  .marquee__line:nth-child(2) {
+    background-image: url('../img/covers/Rectangle_11_1x.jpg');
+  }
+  .marquee__line:nth-child(3) {
+    background-image: url('../img/covers/Rectangle_12_1x.jpg');
+  }
+  .marquee__line:nth-child(4) {
+    background-image: url('../img/covers/Rectangle_9_1x.jpg');
+  }
+  .marquee__line:nth-child(5) {
+    background-image: url('../img/covers/Rectangle_8_1x.jpg');
+  }
+  .marquee__line:nth-child(6) {
+    background-image: url('../img/covers/first_screen_1_1x.jpg');
+  }
+  .marquee__line:nth-child(7) {
+    background-image: url('../img/covers/Rectangle_4_1x.jpg');
+  }
+  .marquee__line:nth-child(8) {
+    background-image: url('../img/covers/Rectangle_5_1x.jpg');
+  }
+  .marquee__line:nth-child(9) {
+    background-image: url('../img/covers/Rectangle_7_1x.jpg');
+  }
+  .marquee__line:nth-child(10) {
+    background-image: url('../img/covers/Rectangle_10_1x.jpg');
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
+  .marquee__line {
+    width: 544px;
+    height: 314px;
+    background-position: center;
+  }
+  .marquee__line:nth-child(1) {
+    background-image: url('../img/covers/Rectangle_10_2x.jpg');
+  }
+  .marquee__line:nth-child(2) {
+    background-image: url('../img/covers/Rectangle_11_2x.jpg');
+  }
+  .marquee__line:nth-child(3) {
+    background-image: url('../img/covers/Rectangle_12_2x.jpg');
+  }
+  .marquee__line:nth-child(4) {
+    background-image: url('../img/covers/Rectangle_9_2x.jpg');
+  }
+  .marquee__line:nth-child(5) {
+    background-image: url('../img/covers/Rectangle_8_2x.jpg');
+  }
+  .marquee__line:nth-child(6) {
+    background-image: url('../img/covers/first_screen_1_2x.jpg');
+  }
+  .marquee__line:nth-child(7) {
+    background-image: url('../img/covers/Rectangle_4_2x.jpg');
+  }
+  .marquee__line:nth-child(8) {
+    background-image: url('../img/covers/Rectangle_5_2x.jpg');
+  }
+  .marquee__line:nth-child(9) {
+    background-image: url('../img/covers/Rectangle_7_2x.jpg');
+  }
+  .marquee__line:nth-child(10) {
+    background-image: url('../img/covers/Rectangle_10_2x.jpg');
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .marquee__line {
     width: 544px;
     height: 314px;
   }
-}
-
-@media (min-width: 1440px) {
-  .marquee__line {
-    width: 544px;
-    height: 314px;
+  .marquee__line:nth-child(1) {
+    background-image: url('../img/covers/Rectangle_10_2x.jpg');
+  }
+  .marquee__line:nth-child(2) {
+    background-image: url('../img/covers/Rectangle_11_2x.jpg');
+  }
+  .marquee__line:nth-child(3) {
+    background-image: url('../img/covers/Rectangle_12_2x.jpg');
+  }
+  .marquee__line:nth-child(4) {
+    background-image: url('../img/covers/Rectangle_9_2x.jpg');
+  }
+  .marquee__line:nth-child(5) {
+    background-image: url('../img/covers/Rectangle_8_2x.jpg');
+  }
+  .marquee__line:nth-child(6) {
+    background-image: url('../img/covers/first_screen_1_2x.jpg');
+  }
+  .marquee__line:nth-child(7) {
+    background-image: url('../img/covers/Rectangle_4_2x.jpg');
+  }
+  .marquee__line:nth-child(8) {
+    background-image: url('../img/covers/Rectangle_5_2x.jpg');
+  }
+  .marquee__line:nth-child(9) {
+    background-image: url('../img/covers/Rectangle_7_2x.jpg');
+  }
+  .marquee__line:nth-child(10) {
+    background-image: url('../img/covers/Rectangle_10_2x.jpg');
   }
 }
+
 .marquee__inner ul {
   display: flex;
   /* flex-wrap: wrap; */
