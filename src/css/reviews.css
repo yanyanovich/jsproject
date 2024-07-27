@@ -13,7 +13,8 @@
     margin-right: auto;
 }
 .container-photo{
-    border-radius: 50px;
+    border-radius: 20px;
+    padding: 32px 24px 32px 24px;
 };
 .swiper-button-prev, .swiper-button-next {
     border:1px solid rgba(250, 250, 250, 0.5);
@@ -28,11 +29,36 @@ height: 442px;
 }
 .js-list-rev{
     margin-top: 32px;
+    
 
 }
 .swiper_reviews {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap:32px;
   
 }
+.container-photo{
+
+}
+.js-reviews-name{
+padding: 32px 24px 32px 24px;
+        font-family: Inter Tight;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+        text-align: left;
+    font-size: 20px;
+color: #FAFAFA;
+}
+.js-user-review {
+    padding: 32px 24px 32px 24px;
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+color: #FAFAFA99;}
