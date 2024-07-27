@@ -27,7 +27,8 @@ const createLiMarkUp = ({
   author,
   avatar_url,
   review,
-}) => `<img class="js-reviews-photo" src="${avatar_url}" alt="${author}" />
+}) => `<li class="swiper-slide">
+<div class="container-photo"><img class="js-reviews-photo" src="${avatar_url}" alt="${author}" /></div>
       <h3 class="js-reviews-name">${author}</h3>
-      <p class="js-user-review">${review}</p>`;
+      <p class="js-user-review">${review}</p></li>`;
 const createListMarkUp = arrReviews => arrReviews.map(createLiMarkUp).join('');

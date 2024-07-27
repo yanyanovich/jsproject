@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    .reviews {
+        padding-top: 32px;
+    }
+}
+
+.js-reviews-photo{
+    width:48px ;
+    height:48px ;
+};
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-photo{
+    border-radius: 50px;
+};
+.swiper-button-prev, .swiper-button-next {
+    border:1px solid rgba(250, 250, 250, 0.5);
+}
+.swiper-slide{
+    width: 343px;
+height: 442px;
+};
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+.js-list-rev{
+    margin-top: 32px;
+
+}
+.swiper_reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
