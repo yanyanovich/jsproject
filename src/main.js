@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
 import AOS from 'aos';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 import {
   Autoplay,
   Navigation,
@@ -31,9 +33,9 @@ document.addEventListener('DOMContentLoaded', event => {
     once: true,
     offset: window.innerHeight / 30,
   });
-  aboutMe(Swiper);
+  aboutMe(Swiper, Accordion);
   burger();
-  faq();
+  faq(Accordion);
   form();
   modal();
   projects(Swiper);
