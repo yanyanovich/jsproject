@@ -15,6 +15,7 @@ import { form } from './js/form.js';
 import { modal } from './js/modal.js';
 import { projects } from './js/projects.js';
 import { reviews } from './js/reviews.js';
+import { covers } from './js/covers.js';
 document.addEventListener('DOMContentLoaded', event => {
   Swiper.use([
     Autoplay,
@@ -31,4 +32,5 @@ document.addEventListener('DOMContentLoaded', event => {
   modal();
   projects(Swiper);
   reviews(Swiper);
+  covers(Swiper);
 });
