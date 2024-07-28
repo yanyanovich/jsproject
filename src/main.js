@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import AOS from 'aos';
 import {
   Autoplay,
   Navigation,
@@ -25,6 +26,11 @@ document.addEventListener('DOMContentLoaded', event => {
     EffectFade,
     Controller,
   ]);
+  AOS.init({
+    duration: 1200,
+    once: true,
+    offset: window.innerHeight / 30,
+  });
   aboutMe(Swiper);
   burger();
   faq();

@@ -4,6 +4,7 @@
   | default @import url()
   |============================
 */
+@import url('aos/dist/aos.css');
 @import url('swiper/css');
 @import url('./inter-tight.css');
 @import url('./normalize.css');
