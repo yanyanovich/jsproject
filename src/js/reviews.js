@@ -11,7 +11,6 @@ export const reviews = Swiper => {
 
     fetchReviews()
       .then(data => {
-        console.log(data);
         const listMarkUp = createListMarkUp(data);
         reviewsEl.insertAdjacentHTML('beforeend', listMarkUp);
 
