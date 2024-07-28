@@ -12,10 +12,17 @@
   width: 100%;
   height: 100%;
   backdrop-filter: blur(30px);
-  background: linear-gradient(
-    rgba(217, 217, 217, 0.2),
-    rgba(217, 217, 217, 0.2)
-  );
+  background: radial-gradient(
+        circle at 20% 20%,
+        red 0%,
+        red 10%,
+        transparent 10.5%
+      )
+      no-repeat,
+    radial-gradient(circle at 80% 80%, red 0%, red 10%, transparent 10.5%)
+      no-repeat,
+    rgba(217, 217, 217, 0.04);
+  filter: blur(80px);
   z-index: -1;
 }
 
@@ -86,17 +93,6 @@
     height: auto;
   }
 }
-
-/* @media screen and (max-width: 767px) {
-  .marquee__line {
-    width: 282px;
-    height: 162px;
-  }
-  .covers {
-    height: 508px;
-    overflow: hidden;
-  }
-} */
 
 @media screen and (min-width: 768px) {
   .marquee__line {
