@@ -88,3 +88,62 @@ img {
 .answer-js.hidden {
   max-height: 0;
 }
+
+/* .element-for-swiper {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  text-align: center;
+  padding-top: 53px;
+}
+.element-for-swiper.active {
+  background: #ed3b44;
+  border: none;
+} */
+
+.swiper-container {
+  width: 100%;
+  height: 150px;
+  padding: 20px 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+
+  color: #fafafa;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+}
+
+.swiper-scrollbar {
+  background: rgba(255, 255, 255, 0.2);
+}

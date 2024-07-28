@@ -1,9 +1,17 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
 export const aboutMe = Swiper => {
   const triggers = document.querySelectorAll('.question-js');
   const answers = document.querySelectorAll('.answer-js');
   answers.forEach(answer => {
     answer.style.maxHeight = answer.scrollHeight + 'px';
   });
+
+
   triggers.forEach(trigger => {
     let triggerSiblings = trigger
       .closest('.item-js')
@@ -33,3 +41,25 @@ export const aboutMe = Swiper => {
     });
   });
 };
+
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+
+
+// Ініціалізація Swiper
+const swiper = new Swiper('.swiper-container', {
+  modules: [Navigation, Pagination, Scrollbar],
+  spaceBetween: 6,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
