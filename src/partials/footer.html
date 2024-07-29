@@ -1,56 +1,65 @@
-<footer class="footer" id="footer">
-  <div class="container" id="work-together">
-    <div class="bodyConyainer">
-      <div class="bodyText">
-        <picture class="imgCorrect">
-          <source
-            srcset="../img/footer/imgMobile.png,
-            ../img/footer/imgMobileX2.png 2x"
-            type="image/webp"
-            media="(max-width: 767px)"
-          />
-          <source
-            srcset="../img/footer/imgTable.png,
-            ../img/footer/imgTableX2.png"
-            type="image/webp"
-            media="(min-width: 768px)"
-          />
-          <img
-            src="../img/footer/imgTable.png"
-            srcset="
-              ../img/footer/imgTableX2.png 2x"
-            alt="Footer Image"
-            loading="lazy"
-          />
-        </picture>
-        <h1 class="footerText">
-          Let’s <span class="colorText">work</span>
-        </h1>
+<footer class="footer" id="footer" data-aos="fade-up">
+  <div class="container footer-container">
+    <div class="footer-top">
+      <img
+        class="footer-image"
+        srcset="
+          ./img/footer/footer_img_1x.jpg 1x,
+          ./img/footer/footer_img_2x.jpg 2x
+        "
+        src="./img/footer/footer_img_1x.jpg"
+        alt="Photo Djefferson"
+      />
+      <h2 class="footer-title">Let’s <span class="title-accent">work</span></h2>
+      <h2 class="footer-title">together</h2>
+    </div>
+    <form class="footer-form">
+      <input
+        class="footer-form-input"
+        id="user-email"
+        type="email"
+        name="email"
+        placeholder="clients@gmail.com"
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        autocomplete="off"
+      />
+      <input
+        class="footer-form-input"
+        id="user-comment"
+        type="text"
+        name="comments"
+        placeholder="comments"
+        autocomplete="off"
+      />
+      <button class="footer-form-btn" id="form-btn" type="submit">Send</button>
+    </form>
+    <address class="footer-bottom">
+      <ul class="contacts">
+        <li class="contacts-item contacts-mail">
+          <a class="contacts-link" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="contacts-item contacts-phone">
+          <a class="contacts-link" href="tel:+3801111111111"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
+
+  <div class="footer-backdrop">
+    <div class="modal">
+      <div class="modal-box">
+        <button class="close-btn" type="button">
+          <svg class="icon-close" width="22" height="22">
+            <use href="./img/svg-sprites/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h3 class="modal-title"></h3>
+        <p class="modal-message"></p>
       </div>
-      <h1 class="footerText">
-        together
-      </h1>
-      <div class="formBody">
-        <div class="inputBody">
-          <input 
-            class="inputSub email" type="email" placeholder="clients@gmail.com" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required
-          />
-          <input 
-            class="inputSub" type="text" placeholder="comments"  required
-            />
-        </div>
-        <div class="buttonbody">
-          <button class="buttonSub" type="submit">Send</button>
-        </div>
-      </div>
-      <address>
-        <a href="mailto:lloydjefferson@gmail.com">
-          <button class="addressBtn" type="button">lloydjefferson@gmail.com</button>
-        </a>
-        <a href="tel:+3801111111111">
-          <button class="addressBtn" type="button">+380 11 1111 11 11</button>
-        </a>
-      </address>
     </div>
   </div>
 </footer>

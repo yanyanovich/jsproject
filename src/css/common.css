@@ -61,3 +61,7 @@ body {
     max-width: 1440px;
   }
 }
+body.scroll-off,
+body.scroll-off-mobile {
+  overflow: hidden;
+}

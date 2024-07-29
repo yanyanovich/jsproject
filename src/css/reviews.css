@@ -1,14 +1,14 @@
 .reviews {
-  padding-top: 64px;
+  padding: 64px 0;
 }
 @media (min-width: 768px) {
   .reviews {
-    padding-top: 96px;
+    padding: 96px 0;
   }
 }
 @media (min-width: 1440px) {
   .reviews {
-    padding-top: 164px;
+    padding: 164px 0;
   }
 }
 .reviews__title {
@@ -72,12 +72,7 @@
 @media (min-width: 768px) {
   .reviews__nav {
     gap: 20px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .reviews__nav {
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 

@@ -6,6 +6,7 @@
 */
 @import url('aos/dist/aos.css');
 @import url('swiper/css');
+@import url('../../node_modules/izitoast/dist/css/iziToast.min.css');
 @import url('./inter-tight.css');
 @import url('./normalize.css');
 @import url('./common.css');
@@ -18,4 +19,3 @@
 @import url('./hero.css');
 @import url('./projects.css');
 @import url('./reviews.css');
-@import url('./modal.css');
