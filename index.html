@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/jsproject/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/jsproject/assets/vendor-7b9ec6c0.js">
     <link rel="stylesheet" href="/jsproject/assets/vendor-8255b786.css">
-    <link rel="stylesheet" href="/jsproject/assets/index-dd1d2024.css">
+    <link rel="stylesheet" href="/jsproject/assets/index-f47b6475.css">
   </head>
   <body>
     <div class="page" id="page">
@@ -301,7 +301,6 @@
     </div>
   </div>
 </section>
-
         <section class="benefits" data-aos="fade-up" id="benefits">
   <div class="container">
     <div class="benefits_container">
@@ -714,7 +713,6 @@
     </ul>
   </div>
 </section>
-
         <section class="covers" data-aos="fade-up" id="projects">
   <div class="covers__wrapper">
     <h2 class="visually-hidden">Covers</h2>
@@ -1424,8 +1422,59 @@
 </div>
 
       <footer class="footer" id="footer">
-  <div class="container">
-    <p>footer</p>
+  <div class="container" id="work-together">
+    <div class="bodyConyainer">
+      <div class="bodyText">
+        <picture class="imgCorrect">
+          <source
+            srcset="../img/footer/imgMobile.png,
+            ../img/footer/imgMobileX2.png 2x"
+            type="image/webp"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="../img/footer/imgTable.png,
+            ../img/footer/imgTableX2.png"
+            type="image/webp"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="../img/footer/imgTable.png"
+            srcset="
+              ../img/footer/imgTableX2.png 2x"
+            alt="Footer Image"
+            loading="lazy"
+          />
+        </picture>
+        <h1 class="footerText">
+          Let’s <span class="colorText">work</span>
+        </h1>
+      </div>
+      <h1 class="footerText">
+        together
+      </h1>
+      <div class="formBody">
+        <div class="inputBody">
+          <input 
+            class="inputSub email" type="email" placeholder="clients@gmail.com" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required
+          />
+          <input 
+            class="inputSub" type="text" placeholder="comments"  required
+            />
+        </div>
+        <div class="buttonbody">
+          <button class="buttonSub" type="submit">Send</button>
+        </div>
+      </div>
+      <address>
+        <a href="mailto:lloydjefferson@gmail.com">
+          <button class="addressBtn" type="button">lloydjefferson@gmail.com</button>
+        </a>
+        <a href="tel:+3801111111111">
+          <button class="addressBtn" type="button">+380 11 1111 11 11</button>
+        </a>
+      </address>
+    </div>
   </div>
 </footer>
 
