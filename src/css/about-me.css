@@ -1,3 +1,6 @@
+.about {
+  padding-top: 64px;
+}
 .about .container {
   min-width: 0;
 }
@@ -250,6 +253,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .about {
+    padding-top: 96px;
+  }
   .about-descr-text {
     padding-right: 68px;
   }

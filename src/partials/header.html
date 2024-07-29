@@ -1,5 +1,43 @@
 <header class="header">
   <div class="container">
-    <p>header</p>
+    <div class="header__content">
+      <a href="/" class="header__logo">
+        <img
+          src="img/header/logo-min.png"
+          alt="jefferson"
+          loading="lazy"
+          class="header__logo_image"
+          srcset="img/header/logo@2x-min.png 2x, img/header/logo@3x-min.png 3x"
+        />
+        <svg class="header__logo_text">
+          <use href="img/header/symbol-defs.svg#jefferson"></use>
+        </svg>
+      </a>
+      <button class="header__menu_btn_open">
+        <span class="header__menu_btn_text">Menu</span>
+      </button>
+      <div class="header__menu">
+        <button class="header__menu_btn_close"></button>
+        <nav class="header__navigation">
+          <ul class="header__navigation_list">
+            <li class="navigation__list_item">
+              <a href="#about" class="navigation__list_link">About me</a>
+            </li>
+            <li class="navigation__list_item">
+              <a href="#benefits" class="navigation__list_link">Benefits</a>
+            </li>
+            <li class="navigation__list_item">
+              <a href="#projects" class="navigation__list_link">Projects</a>
+            </li>
+            <li class="navigation__list_item">
+              <a href="#faq" class="navigation__list_link">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__action">
+          <a href="#together" class="header__action_btn">Order the project</a>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
