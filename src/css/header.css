@@ -97,7 +97,7 @@
     transition: transform 300ms linear, visibility 300ms linear,
       width 300ms linear;
   }
-  .header__menu_open .header__menu {
+  .header__menu_mob_open .header__menu {
     visibility: visible;
     width: 100vw;
     transform: translate(0);
@@ -178,17 +178,18 @@
   background-color: #e0373f;
   transition: background-color 300ms linear;
 }
-.header__menu_btn_open:hover,
-.navigation__list_item:hover {
+.header__menu_btn_open:hover .header__menu_btn_text,
+.navigation__list_item:hover .navigation__list_link {
   color: #e0373f;
   transition: color 300ms linear;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header__menu_btn_open:hover,
   .header__menu_btn_close:hover {
     background-color: #e0373f;
     transition: background-color 300ms linear;
+    outline: none;
   }
 }
 

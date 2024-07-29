@@ -1,4 +1,7 @@
 import Swiper from 'swiper';
+import AOS from 'aos';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 import {
   Autoplay,
   Navigation,
@@ -15,6 +18,7 @@ import { form } from './js/form.js';
 import { modal } from './js/modal.js';
 import { projects } from './js/projects.js';
 import { reviews } from './js/reviews.js';
+import { covers } from './js/covers.js';
 document.addEventListener('DOMContentLoaded', event => {
   Swiper.use([
     Autoplay,
@@ -24,11 +28,17 @@ document.addEventListener('DOMContentLoaded', event => {
     EffectFade,
     Controller,
   ]);
-  aboutMe(Swiper);
+  AOS.init({
+    duration: 1200,
+    once: true,
+    offset: window.innerHeight / 30,
+  });
+  aboutMe(Swiper, Accordion);
   burger();
-  faq();
+  faq(Accordion);
   form();
   modal();
   projects(Swiper);
   reviews(Swiper);
+  covers(Swiper);
 });

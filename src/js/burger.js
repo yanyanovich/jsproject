@@ -35,7 +35,7 @@ function scrollToSection() {
 function hiddenContent() {
   const body = document.body;
   if (window.innerWidth < 768) {
-    if (headerContent.classList.contains('header__menu_open')) {
+    if (headerContent.classList.contains('header__menu_mob_open')) {
       body.style.overflow = 'hidden';
       headerElements.forEach((child, index) => {
         const delay = 200 + index * 150;
@@ -53,14 +53,18 @@ function hiddenContent() {
 }
 
 function showMobileMenu() {
-  headerContent.classList.toggle('header__menu_open');
+  if (window.innerWidth < 768) {
+    headerContent.classList.toggle('header__menu_mob_open');
+  } else {
+    headerContent.classList.toggle('header__menu_open');
+  }
 
   hiddenContent();
   headerBtnClose.addEventListener('click', closeMobileMenu);
   window.document.addEventListener('keydown', handleButtonClose);
 }
 function closeMobileMenu() {
-  headerContent.classList.remove('header__menu_open');
+  headerContent.classList.remove('header__menu_mob_open');
   hiddenContent();
 }
 
